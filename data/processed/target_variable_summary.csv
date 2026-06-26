@@ -1,0 +1,5 @@
+﻿target_variable,source_column,available,non_missing_count,missing_rate,mean,std,min,max,recommended_main_target
+speed,current_speed,True,97094,0.0384828678946326,88.84711173364643,16.27039158901787,15.0,100.0,True
+travel_time,current_travel_time,True,97094,0.0384828678946326,909.8166482995861,263.51647754551647,343.0,2155.0,False
+congestion_index,tti,True,97094,0.0384828678946326,1.044511207278892,0.13686220917384131,1.0,3.742424242424242,False
+travel_time_delay,travel_time_delay,True,97094,0.0384828678946326,34.82199964295768,89.37460933003545,0.0,940.0,False

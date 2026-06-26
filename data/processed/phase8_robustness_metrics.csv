@@ -1,0 +1,4 @@
+﻿history_hours,horizon_hours,checkpoint,n,MAE,RMSE,sMAPE
+72,1,outputs\checkpoints\phase7_tcn_speed_only_h72_y1.pt,10327,0.9177750468981327,2.487460034798854,0.012731221421758547
+168,3,outputs\checkpoints\phase7_tcn_speed_only_h168_y3.pt,6312,0.9244928329767534,1.7751070216475533,0.012630947359783911
+24,6,outputs\checkpoints\phase7_tcn_speed_only_h24_y6.pt,12166,0.8131822087195247,1.5357516547773626,0.011453802036616948

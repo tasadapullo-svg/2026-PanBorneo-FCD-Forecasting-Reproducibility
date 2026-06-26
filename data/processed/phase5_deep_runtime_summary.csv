@@ -1,0 +1,11 @@
+﻿model,history_hours,horizon_hours,device,train_samples,val_samples,test_samples,best_epoch,best_val_MAE,seconds,checkpoint,scaler_metadata
+TCN,24,1,cuda,66585,12201,12265,11,1.0019726981081813,1213.698218499998,outputs\checkpoints\phase5_tcn_h24_y1.pt,outputs\checkpoints\phase5_tcn_h24_y1_scaler.json
+LSTM,24,1,cuda,66585,12201,12265,10,1.011423694531494,37.870656800005236,outputs\checkpoints\phase5_lstm_h24_y1.pt,outputs\checkpoints\phase5_lstm_h24_y1_scaler.json
+TCN,24,3,cuda,64783,11601,11878,8,0.983946312995689,955.3413746000006,outputs\checkpoints\phase5_tcn_h24_y3.pt,outputs\checkpoints\phase5_tcn_h24_y3_scaler.json
+LSTM,24,3,cuda,64783,11601,11878,7,0.9654607175187955,29.51912319999974,outputs\checkpoints\phase5_lstm_h24_y3.pt,outputs\checkpoints\phase5_lstm_h24_y3_scaler.json
+TCN,24,6,cuda,66714,11700,12166,16,0.8830314424302843,1503.6798362000045,outputs\checkpoints\phase5_tcn_h24_y6.pt,outputs\checkpoints\phase5_tcn_h24_y6_scaler.json
+LSTM,24,6,cuda,66714,11700,12166,7,0.8838464267437275,30.455503400000453,outputs\checkpoints\phase5_lstm_h24_y6.pt,outputs\checkpoints\phase5_lstm_h24_y6_scaler.json
+TCN,24,12,cuda,66833,10996,11885,11,0.8300222103358963,1197.6822907999958,outputs\checkpoints\phase5_tcn_h24_y12.pt,outputs\checkpoints\phase5_tcn_h24_y12_scaler.json
+LSTM,24,12,cuda,66833,10996,11885,11,0.8568480256775501,40.51367509999545,outputs\checkpoints\phase5_lstm_h24_y12.pt,outputs\checkpoints\phase5_lstm_h24_y12_scaler.json
+TCN,24,24,cuda,66340,10792,11291,1,0.8745082186450774,448.17424230000324,outputs\checkpoints\phase5_tcn_h24_y24.pt,outputs\checkpoints\phase5_tcn_h24_y24_scaler.json
+LSTM,24,24,cuda,66340,10792,11291,3,0.6815776789603718,19.542976600001566,outputs\checkpoints\phase5_lstm_h24_y24.pt,outputs\checkpoints\phase5_lstm_h24_y24_scaler.json

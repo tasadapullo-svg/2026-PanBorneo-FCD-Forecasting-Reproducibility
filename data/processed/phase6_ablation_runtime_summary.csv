@@ -1,0 +1,16 @@
+﻿model,ablation_group,history_hours,horizon_hours,device,train_samples,val_samples,test_samples,best_epoch,best_val_MAE,seconds,checkpoint,scaler_metadata
+TCN,speed_only,24,1,cuda,66585,12201,12265,3,0.8757360152128963,549.7501345000055,outputs\checkpoints\phase6_tcn_speed_only_h24_y1.pt,outputs\checkpoints\phase6_tcn_speed_only_h24_y1_scaler.json
+TCN,speed_time,24,1,cuda,66585,12201,12265,3,1.0196775566621956,583.0820015000063,outputs\checkpoints\phase6_tcn_speed_time_h24_y1.pt,outputs\checkpoints\phase6_tcn_speed_time_h24_y1_scaler.json
+TCN,speed_reliability,24,1,cuda,66585,12201,12265,13,0.9027635783662992,1498.9028670000116,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y1.pt,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y1_scaler.json
+TCN,speed_volatility,24,1,cuda,66585,12201,12265,4,0.8710669151789516,779.9160789000016,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y1.pt,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y1_scaler.json
+TCN,full_features,24,1,cuda,66585,12201,12265,6,1.039376550165906,971.6790811999963,outputs\checkpoints\phase6_tcn_full_features_h24_y1.pt,outputs\checkpoints\phase6_tcn_full_features_h24_y1_scaler.json
+TCN,speed_only,24,3,cuda,64783,11601,11878,7,0.7873563658789349,1033.4205298000015,outputs\checkpoints\phase6_tcn_speed_only_h24_y3.pt,outputs\checkpoints\phase6_tcn_speed_only_h24_y3_scaler.json
+TCN,speed_time,24,3,cuda,64783,11601,11878,10,0.8800807328442439,1329.0904268000013,outputs\checkpoints\phase6_tcn_speed_time_h24_y3.pt,outputs\checkpoints\phase6_tcn_speed_time_h24_y3_scaler.json
+TCN,speed_reliability,24,3,cuda,64783,11601,11878,12,0.900904391821207,1352.6041253000003,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y3.pt,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y3_scaler.json
+TCN,speed_volatility,24,3,cuda,64783,11601,11878,9,0.8595371126316814,936.0011930000037,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y3.pt,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y3_scaler.json
+TCN,full_features,24,3,cuda,64783,11601,11878,12,0.9497086819508253,1070.3137896999979,outputs\checkpoints\phase6_tcn_full_features_h24_y3.pt,outputs\checkpoints\phase6_tcn_full_features_h24_y3_scaler.json
+TCN,speed_only,24,6,cuda,66714,11700,12166,11,0.7492300287882487,1108.2300497000106,outputs\checkpoints\phase6_tcn_speed_only_h24_y6.pt,outputs\checkpoints\phase6_tcn_speed_only_h24_y6_scaler.json
+TCN,speed_time,24,6,cuda,66714,11700,12166,13,0.8465870842566857,1113.180636899997,outputs\checkpoints\phase6_tcn_speed_time_h24_y6.pt,outputs\checkpoints\phase6_tcn_speed_time_h24_y6_scaler.json
+TCN,speed_reliability,24,6,cuda,66714,11700,12166,3,1.067660877847264,522.6169695999997,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y6.pt,outputs\checkpoints\phase6_tcn_speed_reliability_h24_y6_scaler.json
+TCN,speed_volatility,24,6,cuda,66714,11700,12166,2,0.9029088660998222,449.5623091000016,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y6.pt,outputs\checkpoints\phase6_tcn_speed_volatility_h24_y6_scaler.json
+TCN,full_features,24,6,cuda,66714,11700,12166,11,0.8952768391014164,1111.4155850000097,outputs\checkpoints\phase6_tcn_full_features_h24_y6.pt,outputs\checkpoints\phase6_tcn_full_features_h24_y6_scaler.json

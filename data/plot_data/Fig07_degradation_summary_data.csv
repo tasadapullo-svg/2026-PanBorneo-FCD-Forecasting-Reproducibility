@@ -1,0 +1,4 @@
+﻿stress_type,worst_case_mae_increase_pct,horizon_hours,level,source_csv
+missingness,8.739153804782598,6,0.2,Fig07_missingness_stress_data.csv
+noise,30.481520788031258,6,0.05,Fig07_noise_stress_data.csv
+small_sample_training,14.115476485124423,6,0.8,Fig07_small_sample_training_data.csv

@@ -1,0 +1,2 @@
+dataset,model,feature_group,seed_count,history_steps,horizon_steps,MAE_mean,MAE_std,MAE_cv,RMSE_mean,sMAPE_mean,outperforms_historical_average_all_seeds,outperforms_persistence_all_seeds,interpretation
+METR-LA-mini,TCN,speed_only,5,12,12,3.418273867530823,0.5221977976101612,0.1527665183794558,4.745130060285378,0.0752061853210401,True,False,"Valid supplementary public benchmark sanity check: pipeline runs on public data; supports portability, not benchmark superiority."

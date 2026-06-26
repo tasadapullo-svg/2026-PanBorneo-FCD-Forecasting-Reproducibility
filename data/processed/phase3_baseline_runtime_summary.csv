@@ -1,0 +1,5 @@
+﻿stage,seconds,rows
+load_panel_and_fit_average_tables,0.225,
+build_feature_matrix,180.023,1235042.0
+ridge_regression,3.503,1235042.0
+write_metrics,3.981,1235042.0

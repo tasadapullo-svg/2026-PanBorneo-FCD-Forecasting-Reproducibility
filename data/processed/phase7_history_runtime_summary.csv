@@ -1,0 +1,10 @@
+﻿model,input_feature_group,history_hours,horizon_hours,device,train_samples,val_samples,test_samples,best_epoch,best_val_MAE,seconds,checkpoint,scaler_metadata
+TCN,speed_only,24,1,cuda,66585,12201,12265,3,0.8757360152128963,695.750334700002,outputs\checkpoints\phase7_tcn_speed_only_h24_y1.pt,outputs\checkpoints\phase7_tcn_speed_only_h24_y1_scaler.json
+TCN,speed_only,24,3,cuda,64783,11601,11878,1,0.9585152977797997,493.9539744000067,outputs\checkpoints\phase7_tcn_speed_only_h24_y3.pt,outputs\checkpoints\phase7_tcn_speed_only_h24_y3_scaler.json
+TCN,speed_only,24,6,cuda,66714,11700,12166,7,0.7514632709209735,1118.0725511000055,outputs\checkpoints\phase7_tcn_speed_only_h24_y6.pt,outputs\checkpoints\phase7_tcn_speed_only_h24_y6_scaler.json
+TCN,speed_only,72,1,cuda,65463,10706,10327,4,0.8407551223666517,769.4418925999926,outputs\checkpoints\phase7_tcn_speed_only_h72_y1.pt,outputs\checkpoints\phase7_tcn_speed_only_h72_y1_scaler.json
+TCN,speed_only,72,3,cuda,63763,10055,10035,3,0.855083202284287,649.7195842000074,outputs\checkpoints\phase7_tcn_speed_only_h72_y3.pt,outputs\checkpoints\phase7_tcn_speed_only_h72_y3_scaler.json
+TCN,speed_only,72,6,cuda,65745,10058,10198,3,0.9155553672488629,672.0356767000048,outputs\checkpoints\phase7_tcn_speed_only_h72_y6.pt,outputs\checkpoints\phase7_tcn_speed_only_h72_y6_scaler.json
+TCN,speed_only,168,1,cuda,61291,6110,6488,5,1.168564152444443,812.4458821000007,outputs\checkpoints\phase7_tcn_speed_only_h168_y1.pt,outputs\checkpoints\phase7_tcn_speed_only_h168_y1_scaler.json
+TCN,speed_only,168,3,cuda,59597,5629,6312,4,1.0868923704330653,699.95714459999,outputs\checkpoints\phase7_tcn_speed_only_h168_y3.pt,outputs\checkpoints\phase7_tcn_speed_only_h168_y3_scaler.json
+TCN,speed_only,168,6,cuda,61570,5590,6321,6,1.0300886908242868,900.383839999995,outputs\checkpoints\phase7_tcn_speed_only_h168_y6.pt,outputs\checkpoints\phase7_tcn_speed_only_h168_y6_scaler.json

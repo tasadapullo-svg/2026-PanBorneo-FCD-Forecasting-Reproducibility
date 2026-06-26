@@ -1,0 +1,56 @@
+{
+  "release_folder_path":"PanBorneo_FCD_Forecasting_Reproducibility_Package",
+  "zip_file_path":"PanBorneo_FCD_Forecasting_Reproducibility_Package.zip",
+  "included_files":142,
+  "csv_files":79,
+  "processed_csv_files":59,
+  "plot_data_csv_files":17,
+  "figure_data_mapping_status":{
+    "Figure 1":"ok",
+    "Figure 2":"ok",
+    "Figure 3":"ok",
+    "Figure 4":"ok",
+    "Figure 5":"ok",
+    "Figure 6":"ok",
+    "Figure 7":"ok"
+  },
+  "validation_status":[
+    [
+      "python scripts\/00_check_environment.py",
+      0
+    ],
+    [
+      "python scripts\/01_validate_data_package.py",
+      0
+    ],
+    [
+      "python scripts\/02_generate_file_manifest.py",
+      0
+    ],
+    [
+      "python scripts\/01_validate_data_package.py",
+      0
+    ]
+  ],
+  "warnings":[
+    "none"
+  ],
+  "excluded_files_and_reasons":[
+    {
+      "file":"data_inventory.csv",
+      "source":"outputs\/tables",
+      "reason":"contains raw-provider file paths and local absolute paths"
+    },
+    {
+      "file":"window_index_all.csv",
+      "source":"outputs\/tables",
+      "reason":"over 1 GB intermediate window index; not needed for figure\/table reproduction"
+    }
+  ],
+  "missing_files":[
+    {
+      "file":"none",
+      "critical":"no"
+    }
+  ]
+}

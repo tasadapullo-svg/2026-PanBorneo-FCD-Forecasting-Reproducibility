@@ -1,0 +1,13 @@
+summary_type,history_hours,horizon_hours,condition,level,n,MAE,RMSE,sMAPE,interpretation
+base_metric,72,1,clean_test,base,10327,0.9177750468981328,2.487460034798854,0.0127312214217585,Base robustness evaluation using the Phase 7 best checkpoint.
+base_metric,168,3,clean_test,base,6312,0.9244928329767534,1.7751070216475533,0.0126309473597839,Base robustness evaluation using the Phase 7 best checkpoint.
+base_metric,24,6,clean_test,base,12166,0.8131822087195247,1.5357516547773626,0.0114538020366169,Base robustness evaluation using the Phase 7 best checkpoint.
+volatility_stratification,best_for_horizon,1,input_volatility,q4_high_vs_q1_low,2388,1.8069153463021796,2.7162353969810216,0.0310974907264299,High-volatility samples are dominant difficult cases; q4 MAE exceeds q1 by 1.2645.
+volatility_stratification,best_for_horizon,3,input_volatility,q4_high_vs_q1_low,1359,1.9744524699611816,2.688632632651081,0.0335701321457051,High-volatility samples are dominant difficult cases; q4 MAE exceeds q1 by 1.4946.
+volatility_stratification,best_for_horizon,6,input_volatility,q4_high_vs_q1_low,3454,1.5062378395756475,2.168535906594198,0.0245470208609782,High-volatility samples are dominant difficult cases; q4 MAE exceeds q1 by 1.1723.
+noise_stress,72,1,noise_level,0.05,10327,1.1743553132439233,2.5612525429233552,0.0156096061342801,"Noise stress causes gradual degradation, not catastrophic failure; MAE change from base is 0.2566."
+noise_stress,168,3,noise_level,0.05,6312,1.0385030310114678,1.8410199912054896,0.0139138734726004,"Noise stress causes gradual degradation, not catastrophic failure; MAE change from base is 0.1140."
+noise_stress,24,6,noise_level,0.05,12166,1.0610525127149384,1.6674024576410904,0.0140844385766144,"Noise stress causes gradual degradation, not catastrophic failure; MAE change from base is 0.2479."
+missingness_stress,72,1,missing_level,0.2,10327,0.9912772868948684,2.6314298165620014,0.0138910012994763,Missingness stress causes gradual but milder degradation than noise; MAE change from base is 0.0735.
+missingness_stress,168,3,missing_level,0.2,6312,0.981114484813579,1.9114325209994831,0.0135809613173094,Missingness stress causes gradual but milder degradation than noise; MAE change from base is 0.0566.
+missingness_stress,24,6,missing_level,0.2,12166,0.8842474526526523,1.6998593565265072,0.012639958432049,Missingness stress causes gradual but milder degradation than noise; MAE change from base is 0.0711.

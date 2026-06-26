@@ -1,0 +1,4 @@
+﻿model,input_feature_group,history_hours,horizon_hours,split,n,best_epoch,MAE,RMSE,sMAPE,is_best_history_for_horizon
+TCN,speed_only,72,1,test,1,4,0.9177750448664841,2.4874600530074025,0.012731221516592468,True
+TCN,speed_only,168,3,test,1,4,0.9244928154504194,1.775107011405854,0.012630947165784157,True
+TCN,speed_only,24,6,test,1,7,0.8131786034762928,1.5357511907353814,0.011454137148584738,True

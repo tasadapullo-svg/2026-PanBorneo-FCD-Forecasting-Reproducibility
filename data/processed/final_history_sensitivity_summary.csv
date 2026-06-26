@@ -1,0 +1,7 @@
+summary_type,history_hours,horizon_hours,MAE,RMSE,sMAPE,improvement_percent_vs_seasonal,is_best_history_for_horizon,interpretation
+best_history_per_horizon,72,1,0.917775044866484,2.4874600530074025,0.0127312215165924,22.149702214251374,True,"1h best history is 72h, indicating medium memory helps very short-horizon correction."
+best_history_per_horizon,168,3,0.9244928154504194,1.775107011405854,0.0126309471657841,12.294019979734196,True,"3h best history is 168h, indicating weekly input context can help this horizon."
+best_history_per_horizon,24,6,0.8131786034762928,1.5357511907353814,0.0114541371485847,14.578111136911314,True,"6h best history is 24h, indicating recent dynamics dominate this horizon."
+overall_by_history,24,all_1_3_6,0.9429989654534396,2.0204296781030893,0.0130904576327093,,False,Overall history-level summary; do not interpret as universally best for every horizon.
+overall_by_history,72,all_1_3_6,0.9276232851274558,1.976045811367818,0.0126025105555313,,False,Overall history-level summary; do not interpret as universally best for every horizon.
+overall_by_history,168,all_1_3_6,0.9240849008713956,1.8738464331596705,0.0127013913024887,,False,"168h is slightly best overall, but optimal memory length is horizon-dependent."

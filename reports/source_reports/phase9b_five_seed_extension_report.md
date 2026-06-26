@@ -1,0 +1,41 @@
+# Phase 9B Five-Seed Extension Report
+
+Phase 9B trains only the two additional seeds 1234 and 3407, then merges them with the locked Phase 9 seeds 42, 2025 and 20260623.
+
+## New Seed Metrics
+| model | input_feature_group | seed | history_hours | horizon_hours | split | best_epoch | best_val_MAE | n | MAE | RMSE | sMAPE | checkpoint |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TCN | speed_only | 1234 | 72 | 1 | test | 1 | 0.909556820885658 | 10327 | 0.9621959951132396 | 2.532126293160209 | 0.0134279495291505 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h72_y1.pt |
+| TCN | speed_only | 3407 | 72 | 1 | test | 15 | 0.7969889488483887 | 10327 | 0.8960231542010108 | 2.434357246431286 | 0.0124776390261112 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h72_y1.pt |
+| TCN | speed_only | 1234 | 168 | 3 | test | 12 | 1.030675275094091 | 6312 | 0.9102532038670528 | 1.669630933489738 | 0.0121224007655889 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h168_y3.pt |
+| TCN | speed_only | 3407 | 168 | 3 | test | 7 | 1.048484914064365 | 6312 | 0.8782622575457709 | 1.735398218236663 | 0.0118751579711081 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h168_y3.pt |
+| TCN | speed_only | 1234 | 24 | 6 | test | 11 | 0.7616481490828033 | 12166 | 0.846822934932229 | 1.4709826115956766 | 0.0113351917411573 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h24_y6.pt |
+| TCN | speed_only | 3407 | 24 | 6 | test | 2 | 0.870104735284789 | 12166 | 0.9128333331134276 | 1.6264035388234497 | 0.0129091506656818 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h24_y6.pt |
+
+## Five-Seed Summary By Horizon
+| horizon_hours | history_hours | seed_count | MAE_mean | MAE_std | MAE_min | MAE_max | MAE_cv | best_seed | worst_seed | SeasonalHistoricalAverage_MAE | all_seeds_outperform_seasonal | mean_improvement_percent_vs_seasonal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 72 | 5 | 0.977577333366281 | 0.075985435579366 | 0.8960231542010108 | 1.0802470377411098 | 0.0777283115983373 | 3407 | 2025 | 1.178897282310066 | True | 17.076971163195466 |
+| 3 | 168 | 5 | 0.93718782238785 | 0.0580333930140793 | 0.8782622575457709 | 1.0112939950631146 | 0.0619229055561314 | 3407 | 42 | 1.0540818485088488 | True | 11.089653643724372 |
+| 6 | 24 | 5 | 0.8677188569143691 | 0.038891405279856 | 0.8173141542202976 | 0.9128333331134276 | 0.0448202836321373 | 20260623 | 3407 | 0.9519557742157024 | True | 8.848826760963178 |
+
+## Five-Seed Comparison With SeasonalHistoricalAverage
+| model | input_feature_group | seed | history_hours | horizon_hours | split | best_epoch | best_val_MAE | n | MAE | RMSE | sMAPE | checkpoint | SeasonalHistoricalAverage_MAE | SeasonalHistoricalAverage_RMSE | SeasonalHistoricalAverage_sMAPE | delta_MAE_vs_seasonal | improvement_percent_vs_seasonal | outperforms_seasonal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TCN | speed_only | 42 | 72 | 1 | test | 5 | 0.8631505504759944 | 10327 | 0.921559664498251 | 2.464457546289207 | 0.0126432475322459 | outputs\checkpoints\phase9_tcn_speed_only_seed42_h72_y1.pt | 1.178897282310066 | 2.733031629503305 | 0.0162567476422331 | 0.2573376178118151 | 21.82867173190512 | True |
+| TCN | speed_only | 2025 | 72 | 1 | test | 2 | 1.0160466127700278 | 10327 | 1.0802470377411098 | 2.5360867013366653 | 0.0148924630454127 | outputs\checkpoints\phase9_tcn_speed_only_seed2025_h72_y1.pt | 1.178897282310066 | 2.733031629503305 | 0.0162567476422331 | 0.0986502445689563 | 8.368010177752701 | True |
+| TCN | speed_only | 20260623 | 72 | 1 | test | 1 | 0.9713008370373644 | 10327 | 1.0278608152777942 | 2.5178863983365125 | 0.0140077295928857 | outputs\checkpoints\phase9_tcn_speed_only_seed20260623_h72_y1.pt | 1.178897282310066 | 2.733031629503305 | 0.0162567476422331 | 0.1510364670322719 | 12.811673188041777 | True |
+| TCN | speed_only | 42 | 168 | 3 | test | 5 | 1.1505704057388184 | 6312 | 1.0112939950631146 | 1.775941227951191 | 0.0132922870570154 | outputs\checkpoints\phase9_tcn_speed_only_seed42_h168_y3.pt | 1.0540818485088488 | 2.0065083242358743 | 0.0142471720276558 | 0.0427878534457342 | 4.059253416256415 | True |
+| TCN | speed_only | 2025 | 168 | 3 | test | 3 | 1.079685228123803 | 6312 | 0.89997770819525 | 1.776589387439982 | 0.0123645373714377 | outputs\checkpoints\phase9_tcn_speed_only_seed2025_h168_y3.pt | 1.0540818485088488 | 2.0065083242358743 | 0.0142471720276558 | 0.1541041403135987 | 14.619750879080344 | True |
+| TCN | speed_only | 20260623 | 168 | 3 | test | 3 | 1.119267727134706 | 6312 | 0.9861519472680618 | 1.7737138950899949 | 0.0131454297236588 | outputs\checkpoints\phase9_tcn_speed_only_seed20260623_h168_y3.pt | 1.0540818485088488 | 2.0065083242358743 | 0.0142471720276558 | 0.067929901240787 | 6.444461721533644 | True |
+| TCN | speed_only | 42 | 24 | 6 | test | 14 | 0.810630122779781 | 12166 | 0.899449512281642 | 1.512936940484077 | 0.0122290218353395 | outputs\checkpoints\phase9_tcn_speed_only_seed42_h24_y6.pt | 0.9519557742157024 | 1.6018649170103407 | 0.0127049756404673 | 0.0525062619340603 | 5.515619880274297 | True |
+| TCN | speed_only | 2025 | 24 | 6 | test | 2 | 0.8156948555840386 | 12166 | 0.8621743500242495 | 1.569319419715213 | 0.0117267727491512 | outputs\checkpoints\phase9_tcn_speed_only_seed2025_h24_y6.pt | 0.9519557742157024 | 1.6018649170103407 | 0.0127049756404673 | 0.0897814241914529 | 9.43126000421838 | True |
+| TCN | speed_only | 20260623 | 24 | 6 | test | 12 | 0.7407632941873664 | 12166 | 0.8173141542202976 | 1.468999128745931 | 0.0110275039223168 | outputs\checkpoints\phase9_tcn_speed_only_seed20260623_h24_y6.pt | 0.9519557742157024 | 1.6018649170103407 | 0.0127049756404673 | 0.1346416199954048 | 14.143684364573907 | True |
+| TCN | speed_only | 1234 | 72 | 1 | test | 1 | 0.909556820885658 | 10327 | 0.9621959951132396 | 2.532126293160209 | 0.0134279495291505 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h72_y1.pt | 1.178897282310066 | 2.733031629503305 | 0.0162567476422331 | 0.2167012871968265 | 18.381693676670228 | True |
+| TCN | speed_only | 3407 | 72 | 1 | test | 15 | 0.7969889488483887 | 10327 | 0.8960231542010108 | 2.434357246431286 | 0.0124776390261112 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h72_y1.pt | 1.178897282310066 | 2.733031629503305 | 0.0162567476422331 | 0.2828741281090553 | 23.994807041607512 | True |
+| TCN | speed_only | 1234 | 168 | 3 | test | 12 | 1.030675275094091 | 6312 | 0.9102532038670528 | 1.669630933489738 | 0.0121224007655889 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h168_y3.pt | 1.0540818485088488 | 2.0065083242358743 | 0.0142471720276558 | 0.1438286446417959 | 13.64492186686094 | True |
+| TCN | speed_only | 3407 | 168 | 3 | test | 7 | 1.048484914064365 | 6312 | 0.8782622575457709 | 1.735398218236663 | 0.0118751579711081 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h168_y3.pt | 1.0540818485088488 | 2.0065083242358743 | 0.0142471720276558 | 0.1758195909630778 | 16.679880334890512 | True |
+| TCN | speed_only | 1234 | 24 | 6 | test | 11 | 0.7616481490828033 | 12166 | 0.846822934932229 | 1.4709826115956766 | 0.0113351917411573 | outputs\checkpoints\phase9b_tcn_speed_only_seed1234_h24_y6.pt | 0.9519557742157024 | 1.6018649170103407 | 0.0127049756404673 | 0.1051328392834733 | 11.043878521572102 | True |
+| TCN | speed_only | 3407 | 24 | 6 | test | 2 | 0.870104735284789 | 12166 | 0.9128333331134276 | 1.6264035388234497 | 0.0129091506656818 | outputs\checkpoints\phase9b_tcn_speed_only_seed3407_h24_y6.pt | 0.9519557742157024 | 1.6018649170103407 | 0.0127049756404673 | 0.0391224411022749 | 4.109691034177205 | True |
+
+The locked Phase 9 output files are read only and are not modified by this extension.

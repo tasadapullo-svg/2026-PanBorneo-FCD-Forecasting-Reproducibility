@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: Please cite the associated paper and this repository.
+title: Pan Borneo Highway Floating-Car-Data Traffic Forecasting Reproducibility Package
+authors:
+  - family-names: Sun
+    given-names: Wenjie
+    affiliation: Universiti Teknologi Malaysia
+version: 1.0.0
+date-released: 2026-06-26

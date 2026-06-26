@@ -1,0 +1,4 @@
+horizon_hours,history_hours,seed_count,MAE_mean,MAE_std,MAE_cv,all_seeds_outperform_seasonal,mean_improvement_percent_vs_seasonal,source_phase,interpretation
+1,72,5,0.977577333366281,0.075985435579366,0.0777283115983373,True,17.076971163195466,Phase 9B,1h has slightly larger seed variation but remains consistently better than the strong baseline.
+3,168,5,0.93718782238785,0.0580333930140793,0.0619229055561314,True,11.089653643724372,Phase 9B,3h remains consistently better than the strong baseline with moderate seed variation.
+6,24,5,0.8677188569143691,0.038891405279856,0.0448202836321373,True,8.848826760963178,Phase 9B,6h is the most stable horizon among the repeated-seed runs.

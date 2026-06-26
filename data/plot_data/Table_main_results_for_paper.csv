@@ -1,0 +1,19 @@
+﻿result_group,model,feature_group,history_hours,horizon_hours,MAE,MAE_std,RMSE,sMAPE,improvement_percent_vs_seasonal,interpretation
+strong_baseline,SeasonalHistoricalAverage,seasonal_hour_day_point,train historical table,1,1.178897282310066,,2.733031629503305,0.0162567476422331,0.0,Strong periodic baseline used as the main comparator.
+strong_baseline,SeasonalHistoricalAverage,seasonal_hour_day_point,train historical table,3,1.0540818485088488,,2.0065083242358743,0.0142471720276558,0.0,Strong periodic baseline used as the main comparator.
+strong_baseline,SeasonalHistoricalAverage,seasonal_hour_day_point,train historical table,6,0.9519557742157024,,1.6018649170103407,0.0127049756404673,0.0,Strong periodic baseline used as the main comparator.
+strong_baseline,SeasonalHistoricalAverage,seasonal_hour_day_point,train historical table,12,0.8158950054073275,,1.2743836006637734,0.010803456458853,0.0,Strong periodic baseline used as the main comparator.
+strong_baseline,SeasonalHistoricalAverage,seasonal_hour_day_point,train historical table,24,0.6394572216979711,,0.9687305138257464,0.0083142477735837,0.0,Strong periodic baseline used as the main comparator.
+controlled_deep,TCN,full_features,24,1,1.0890810658967691,,2.44820870044504,0.0143968321622088,7.618663454486941,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,LSTM,full_features,24,1,1.0913456462326705,,2.42554390449956,0.0143285506917948,7.426570354444885,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,TCN,full_features,24,3,1.0168855987949632,,1.806635004690398,0.0136675689980481,3.5287819220589984,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,LSTM,full_features,24,3,1.0176827446301189,,1.814134420077871,0.0134192839520149,3.453157260057339,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,TCN,full_features,24,6,0.8922117933442321,,1.4801173718240044,0.0118075693792493,6.275919794771165,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,LSTM,full_features,24,6,0.9357991028082876,,1.571244423643492,0.0120838080678771,1.6972081944380355,Deep model improves over SeasonalHistoricalAverage at short/medium horizon.
+controlled_deep,TCN,full_features,24,12,0.8465117114704599,,1.399962780977403,0.0112859529333763,-3.752530149127129,SeasonalHistoricalAverage remains stronger for this longer aggregated horizon.
+controlled_deep,LSTM,full_features,24,12,0.8834826943249475,,1.4740441413904106,0.0117336360890672,-8.28387089879016,SeasonalHistoricalAverage remains stronger for this longer aggregated horizon.
+controlled_deep,TCN,full_features,24,24,0.8133512281904862,,1.220468814468373,0.0109534086520247,-27.19400150502152,SeasonalHistoricalAverage remains stronger for this longer aggregated horizon.
+controlled_deep,LSTM,full_features,24,24,0.7131580288253296,,1.1205194245266306,0.0094083573686729,-11.525525809476102,SeasonalHistoricalAverage remains stronger for this longer aggregated horizon.
+final_five_seed_tcn,TCN,speed_only_seed_mean,72,1,0.977577333366281,0.075985435579366,2.496982837110776,0.0134898057451611,17.076971163195466,Seed-stability mean using 5 seeds; MAE_std=0.0760; all seeds outperform seasonal=True
+final_five_seed_tcn,TCN,speed_only_seed_mean,168,3,0.93718782238785,0.0580333930140793,1.7462547324415136,0.0125599625777617,11.089653643724372,Seed-stability mean using 5 seeds; MAE_std=0.0580; all seeds outperform seasonal=True
+final_five_seed_tcn,TCN,speed_only_seed_mean,24,6,0.8677188569143691,0.038891405279856,1.5297283278728695,0.0118455281827293,8.848826760963178,Seed-stability mean using 5 seeds; MAE_std=0.0389; all seeds outperform seasonal=True
