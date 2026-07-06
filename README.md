@@ -1,219 +1,450 @@
 # Pan Borneo Highway Floating-Car-Data Traffic Forecasting Reproducibility Package
 
-## Project Overview
+## Purpose of This Repository
 
-This repository provides the reproducibility package for a traffic forecasting study using floating-car data from the Pan Borneo Highway corridor in Sarawak, Malaysia.
+This repository provides the public reproducibility and manuscript-support package for a Pan Borneo Highway sparse floating-car-data (FCD) traffic forecasting study.
 
-The package is designed to support transparent review, figure reproduction, and result auditing for the associated manuscript. It contains processed analytical tables, figure-ready CSV files, experiment configuration files, validation scripts, and reproducibility documentation.
+The repository is intended to support:
 
-Raw provider-level floating-car records are not included because of data licensing and provider terms.
+- conference paper review;
+- transparent checking of reported experimental results;
+- reproduction of figure and table source data;
+- inspection of model-comparison, ablation, robustness, statistical-test, and supplementary sanity-check outputs;
+- archival of the validated data products used for manuscript writing.
 
-## Associated Study
+Raw provider-level floating-car records are not included because of data licensing and provider terms. The released files are processed, anonymized, aggregated, and audit-ready data products.
 
-The associated study develops and evaluates a leakage-controlled traffic forecasting workflow for a data-sparse highway corridor. The experiments include:
+## Most Important Folder for the Current Paper
 
-* Main forecasting performance comparison
-* Multi-seed stability analysis
-* Feature-group ablation
-* History-length sensitivity analysis
-* Volatility-error analysis
-* Missingness robustness testing
-* Noise robustness testing
-* Small-sample training sensitivity analysis
+The current complete conference-paper support package is:
 
-The repository supports the manuscript figures, tables, and main experimental comparisons using processed and anonymized data products.
+```text
+conference_paper_support_package_20260706/
+```
 
-## Study Corridor
+This folder contains the latest validated results and manuscript-support data generated from the local project state on 2026-07-06.
 
-The case study corridor is located along the Pan Borneo Highway in Sarawak, Malaysia. The public release represents the corridor using anonymized monitoring points and processed hourly traffic features.
+Use this folder first when checking the current paper results.
 
-The released data are intended for reproducibility of the reported analysis rather than redistribution of the original provider-level observations.
+Direct GitHub folder:
 
-## Data Source and Public Release Scope
+```text
+https://github.com/tasadapullo-svg/2026-PanBorneo-FCD-Forecasting-Reproducibility/tree/main/conference_paper_support_package_20260706
+```
 
-The original data source consists of provider-level floating-car traffic observations. These raw records are excluded from this public package.
+## Status Summary
 
-This repository includes:
+The uploaded support package is marked:
 
-* Processed analytical data
-* Anonymized and aggregated traffic-feature tables
-* Figure-ready CSV files
-* Experiment configuration files
-* Validation and manifest-generation scripts
-* Reproducibility reports
-* Documentation for data structure, variables, leakage control, and workflow interpretation
+```text
+READY_FOR_PLOTTING_AND_WRITING
+```
 
-This repository excludes:
+This means the local readiness audit found the result data sufficient for preparing the manuscript figures and tables. It does not mean the repository contains private raw provider records or final rendered manuscript figures.
 
-* Raw provider-level floating-car records
-* Provider API response dumps
-* API keys, tokens, credentials, and private logs
-* Large intermediate window-index files
-* Model checkpoints and temporary training artifacts
-* Cache files and machine-specific local paths
+Key validated components include:
+
+- Phase 13 main baseline comparison;
+- Phase 13A full-output validation;
+- Phase 15 feature ablation;
+- Phase 16 robustness experiments;
+- Phase 17 stratified evaluation outputs where available in the package;
+- Phase 14 final statistical tests;
+- Phase 18 figure/table consistency audit;
+- Phase 19 manuscript data package;
+- Phase 20 METR-LA-mini supplementary sanity check;
+- figure-candidate CSV files;
+- table-candidate CSV files;
+- prediction parquet files used for paired checks;
+- configuration files, scripts, logs, reports, and checksums.
 
 ## Repository Structure
 
 ```text
 .
-├── README.md
-├── LICENSE_CODE.md
-├── DATA_USE_NOTICE.md
-├── CITATION.cff
-├── .gitignore
-│
-├── data/
-│   ├── README_DATA.md
-│   ├── data_dictionary.csv
-│   ├── file_manifest.csv
-│   ├── processed/
-│   └── plot_data/
-│       └── deprecated/
-│
-├── configs/
-├── scripts/
-├── reports/
-├── docs/
-└── figures/
+|-- README.md
+|-- LICENSE_CODE.md
+|-- DATA_USE_NOTICE.md
+|-- CITATION.cff
+|-- data/
+|   |-- README_DATA.md
+|   |-- data_dictionary.csv
+|   |-- file_manifest.csv
+|   |-- processed/
+|   `-- plot_data/
+|       `-- deprecated/
+|-- configs/
+|-- scripts/
+|-- reports/
+|-- docs/
+|-- figures/
+`-- conference_paper_support_package_20260706/
+    |-- 00_READ_FIRST/
+    |-- 01_FIGURE_CANDIDATE_DATA/
+    |-- 02_TABLE_CANDIDATE_DATA/
+    |-- 03_PHASE13_MAIN_RESULTS/
+    |-- 04_PHASE15_ABLATION_RESULTS/
+    |-- 05_PHASE16_ROBUSTNESS_RESULTS/
+    |-- 06_PHASE20_FULL_RESULTS/
+    |-- 07_PREDICTION_PARQUETS/
+    |-- 08_STATISTICAL_TESTS/
+    |-- 09_SUPPLEMENTARY_DATA/
+    |-- 10_CONFIGS_ENVIRONMENT_LOGS/
+    |-- 11_GITHUB_ZENODO_METADATA/
+    |-- 12_AUDIT_REPORTS/
+    |-- release_archive/
+    |-- PUBLIC_UPLOAD_NOTICE.md
+    `-- PUBLIC_UPLOAD_CHECKSUMS_SHA256.csv
 ```
 
-### Folder Description
+## Current Support Package Contents
 
-| Folder / File                | Description                                                                                                        |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `data/processed/`            | Processed analytical tables and compact anonymized data products used for model evaluation and result auditing.    |
-| `data/plot_data/`            | Figure-ready CSV files used to reproduce the manuscript figures.                                                   |
-| `data/plot_data/deprecated/` | Older plot-data files retained for traceability but not used in the current manuscript figure definition.          |
-| `configs/`                   | YAML configuration files for forecasting, ablation, robustness, history-sensitivity, and small-sample experiments. |
-| `scripts/`                   | Validation scripts, manifest-generation scripts, and selected public project scripts.                              |
-| `reports/`                   | Preprocessing, experiment, validation, and reproducibility reports.                                                |
-| `docs/`                      | Workflow documentation, variable definitions, leakage-control protocol, and GitHub upload checklist.               |
-| `figures/`                   | Notes for figure reproduction and manuscript-specific plotting guidance.                                           |
+The folder `conference_paper_support_package_20260706/` contains 536 files. It is a curated public upload package prepared from the local project after the major validation steps were completed.
 
-## Data Availability Statement
+### `00_READ_FIRST/`
 
-Raw provider-level floating-car data are not redistributed because of data licensing and provider terms. This repository provides processed, anonymized, aggregated, and figure-ready data sufficient to reproduce the reported figures, tables, and main experimental comparisons.
+Start here. This folder contains the top-level package explanation and review-facing notes. It is intended to help reviewers or collaborators understand what is included, what is excluded, and how the package should be interpreted.
 
-Exact provider-level raw records may require independent access from the original data provider. The released package is intended for academic reproducibility and non-commercial research use.
+### `01_FIGURE_CANDIDATE_DATA/`
 
-## Reproducibility Workflow
+Contains CSV files prepared as candidate source data for the manuscript figures.
 
-The reproducibility workflow follows the sequence below:
+These files are not the final rendered figures. They are figure-input data tables intended for plotting and review.
+
+Expected manuscript figure coverage includes:
+
+- Figure 1: study corridor, data source, and leakage-controlled workflow;
+- Figure 2: main model and baseline forecasting performance;
+- Figure 3: seed stability and performance consistency;
+- Figure 4: feature ablation;
+- Figure 5: sensitivity or diagnostic figure data where available;
+- Figure 6: volatility or error-heterogeneity figure data where available;
+- Figure 7: robustness under missingness, noise, and small-sample training.
+
+### `02_TABLE_CANDIDATE_DATA/`
+
+Contains CSV files prepared as candidate source data for manuscript tables.
+
+These files are table-input data, not final formatted manuscript tables. They should be used to prepare the paper tables while preserving traceability to the experiment outputs.
+
+Expected table coverage includes:
+
+- dataset audit and experimental design summary;
+- main model comparison summary;
+- statistical test summary with corrected p-values and effect sizes;
+- robustness, ablation, stratified, and supplementary summaries where applicable.
+
+### `03_PHASE13_MAIN_RESULTS/`
+
+Contains the main strong-baseline comparison outputs.
+
+Phase 13 evaluates the forecasting target using the same chronological split and shared test samples across model comparisons. The expected full design is:
+
+- 7 models;
+- 3 horizons: 1h, 3h, 6h;
+- 5 seeds: 42, 2024, 2025, 2026, 3407;
+- 105 metric rows;
+- 105 prediction parquet files.
+
+The model set is:
+
+- HA;
+- SeasonalHA;
+- Persistence;
+- XGBoost;
+- GRU;
+- TCN;
+- ST-Transformer-lite.
+
+The metrics include MAE, RMSE, MAPE, sMAPE, R2, timing fields, configuration hash, and data hash where available.
+
+### `04_PHASE15_ABLATION_RESULTS/`
+
+Contains feature-ablation outputs.
+
+Phase 15 evaluates whether different feature groups improve or change forecasting performance relative to a speed-only reference.
+
+Feature groups:
+
+- `speed_only`;
+- `speed_time`;
+- `speed_reliability`;
+- `speed_volatility`;
+- `full_features`.
+
+Expected full design:
+
+- 5 feature groups;
+- 3 horizons;
+- 5 seeds;
+- 75 metric rows;
+- 75 prediction parquet files.
+
+The `speed_only` reference is expected to have `relative_MAE_change_from_speed_only_percent = 0`.
+
+### `05_PHASE16_ROBUSTNESS_RESULTS/`
+
+Contains robustness experiment outputs.
+
+Phase 16 evaluates model behavior under sparse, noisy, and small-sample conditions.
+
+Included robustness families:
+
+- missingness stress;
+- noise stress;
+- small-sample training.
+
+Expected full checks:
+
+- missingness stress: 4 levels x 3 horizons x 5 seeds = 60 rows;
+- noise stress: 4 levels x 3 horizons x 5 seeds = 60 rows;
+- small-sample training: 5 ratios x 3 horizons x 5 seeds = 75 rows.
+
+Reference conditions:
+
+- 0% missingness relative change should be 0;
+- clean noise relative change should be 0;
+- 100% small-sample training relative change should be 0.
+
+### `06_PHASE20_FULL_RESULTS/`
+
+Contains the supplementary METR-LA-mini sanity-check outputs.
+
+Important interpretation rule:
+
+METR-LA-mini is supplementary only. It must not be mixed with the Pan Borneo main manuscript figures or main tables.
+
+The supplementary check is intended to answer whether the workflow behavior is plausible outside the Pan Borneo corridor. It is not a full benchmark comparison and should not be presented as a state-of-the-art METR-LA benchmark.
+
+Known note:
+
+- In the Phase 20 package, `Proposed` is documented as an alias/implementation equivalent to the TCN-style proposed model used in that supplementary setting. Do not overclaim method differences based on this supplementary result.
+
+### `07_PREDICTION_PARQUETS/`
+
+Contains prediction parquet files used for reproducibility checks and paired statistical testing.
+
+Typical parquet columns include:
+
+- `sample_id`;
+- `timestamp`;
+- `node_id`;
+- `horizon`;
+- model or feature-group identifier;
+- `seed`;
+- `y_true`;
+- `y_pred`;
+- `abs_error`;
+- `squared_error`.
+
+These files allow MAE and RMSE to be recomputed from sample-level predictions.
+
+### `08_STATISTICAL_TESTS/`
+
+Contains statistical-test output tables.
+
+These files are used to support manuscript claims about:
+
+- proposed/main model vs baselines;
+- feature groups vs speed-only reference;
+- robustness perturbations vs clean/reference conditions;
+- stratified or grouped error differences where available.
+
+The expected statistical fields include:
+
+- test name;
+- statistic;
+- raw p-value;
+- corrected p-value;
+- effect size;
+- effect-size type;
+- significance label;
+- sample count or pair count.
+
+Paired tests should use paired sample-level predictions where applicable. Independent strata should not be treated as paired comparisons.
+
+### `09_SUPPLEMENTARY_DATA/`
+
+Contains supplementary outputs that should remain separate from the main Pan Borneo manuscript results.
+
+The main example is METR-LA-mini. These files may be useful for supplementary material or reviewer response, but they are not part of the primary Pan Borneo experimental claims.
+
+### `10_CONFIGS_ENVIRONMENT_LOGS/`
+
+Contains reproducibility support files:
+
+- YAML configuration files;
+- selected scripts;
+- logs;
+- environment or command records where available.
+
+These files document the experimental procedure and help explain how the outputs were generated.
+
+This folder is not a full Python environment export. Conda environments, package caches, and machine-specific runtime folders are intentionally excluded.
+
+### `11_GITHUB_ZENODO_METADATA/`
+
+Contains release-support metadata, manifests, checksums, and documentation intended for GitHub or Zenodo-style archiving.
+
+Use this folder when preparing a formal archival release or when checking whether the package files are complete.
+
+### `12_AUDIT_REPORTS/`
+
+Contains validation and readiness reports.
+
+Important report types include:
+
+- phase validation reports;
+- figure/table consistency audit reports;
+- applied-intelligence readiness audit reports;
+- package-generation summaries;
+- warning lists and critical-error checks where available.
+
+### `release_archive/`
+
+Contains a ZIP archive copy of the paper data package:
 
 ```text
-Raw floating-car data collection
-→ Data cleaning and quality control
-→ Hourly temporal alignment
-→ Feature construction
-→ Leakage-controlled train/validation/test splitting
-→ Model training and evaluation
-→ Robustness and sensitivity experiments
-→ Figure-ready data generation
-→ Public validation and release
+paper_data_package_for_gpt_review.zip
 ```
 
-Only the public, processed, and figure-ready stages are included in this repository. Steps requiring private raw provider data are documented but not directly reproducible from this public release.
+GitHub accepted this file, but it is larger than GitHub's recommended 50 MB file-size guideline. It is below GitHub's 100 MB hard file-size limit.
 
-## Validation
+For long-term archival, a Zenodo release is preferable for large packaged archives.
 
-To validate the package locally, run the following commands from the repository root:
+### `PUBLIC_UPLOAD_NOTICE.md`
 
-```bash
-python scripts/00_check_environment.py
-python scripts/01_validate_data_package.py
-python scripts/02_generate_file_manifest.py
-python scripts/01_validate_data_package.py
-```
+Explains what was included and excluded from the public upload.
 
-The validation scripts check:
+Read this file before reusing or redistributing the data.
 
-* CSV readability
-* File manifest completeness
-* Figure 1–7 data availability
-* Missing or empty files
-* Duplicate CSV columns
-* Suspicious private fields or credentials
-* Absolute local paths
-* Raw, log, cache, checkpoint, and temporary files
+### `PUBLIC_UPLOAD_CHECKSUMS_SHA256.csv`
 
-The generated validation output is stored in:
+Contains SHA256 checksums for uploaded package files. This file can be used to verify file integrity after download.
+
+## Main Experimental Phases Represented
+
+| Phase | Purpose | Main Output Type |
+|---|---|---|
+| Phase 13 | Strong baseline comparison | Metrics CSV and prediction parquet files |
+| Phase 13A | Full-output validation | Validation report and summary |
+| Phase 15 | Feature ablation | Metrics CSV, prediction parquet files, report |
+| Phase 16 | Robustness under missingness, noise, and small-sample training | Robustness CSV tables and report |
+| Phase 17 | Stratified evaluation | Reliability, coverage, volatility, and traffic-state stratified tables where available |
+| Phase 14 | Final statistical tests | p-values, corrected p-values, effect sizes, mean/std summaries |
+| Phase 18 | Figure/table consistency audit | Readiness and consistency reports |
+| Phase 19 | Manuscript data package | Figure/table candidate data and package manifest |
+| Phase 20 | Supplementary METR-LA-mini sanity check | Supplementary-only metrics and prediction files |
+
+## Data Availability and Restrictions
+
+The original source data were provider-level floating-car observations. Those raw records are excluded from this public repository.
+
+This repository includes:
+
+- processed analytical data;
+- anonymized and aggregated traffic-feature tables;
+- figure-ready candidate CSV files;
+- table-ready candidate CSV files;
+- experiment metrics;
+- prediction parquet files needed for reproducibility checks;
+- configuration files;
+- scripts;
+- logs and reports;
+- manifests and checksums.
+
+This repository excludes:
+
+- raw provider-level floating-car records;
+- provider API response dumps;
+- API keys, tokens, credentials, and private access logs;
+- local conda environments;
+- package caches;
+- temporary runtime files;
+- machine-specific hidden caches;
+- unrestricted raw records that cannot be redistributed under provider terms.
+
+## Leakage-Control and Split Assumptions
+
+The reported forecasting experiments are designed around a leakage-controlled workflow:
+
+- chronological train/validation/test split;
+- scalers fitted only on training data;
+- shared test samples across comparable model runs;
+- horizons fixed at 1h, 3h, and 6h;
+- main node count documented as 51 where applicable;
+- repeated evaluation across seeds 42, 2024, 2025, 2026, and 3407 where required.
+
+Validation reports in the support package should be used to confirm which checks passed for each phase.
+
+## How to Use This Repository for Paper Review
+
+Recommended review sequence:
+
+1. Open `conference_paper_support_package_20260706/00_READ_FIRST/`.
+2. Check `conference_paper_support_package_20260706/12_AUDIT_REPORTS/`.
+3. Use `01_FIGURE_CANDIDATE_DATA/` for figure source data.
+4. Use `02_TABLE_CANDIDATE_DATA/` for table source data.
+5. Use `03_PHASE13_MAIN_RESULTS/` for main model comparison.
+6. Use `04_PHASE15_ABLATION_RESULTS/` for feature-group analysis.
+7. Use `05_PHASE16_ROBUSTNESS_RESULTS/` for missingness, noise, and small-sample robustness.
+8. Use `08_STATISTICAL_TESTS/` for p-values, corrected p-values, effect sizes, and mean/std summaries.
+9. Use `09_SUPPLEMENTARY_DATA/` and `06_PHASE20_FULL_RESULTS/` only for supplementary METR-LA-mini discussion.
+10. Use `PUBLIC_UPLOAD_CHECKSUMS_SHA256.csv` to verify file integrity if needed.
+
+## Important Interpretation Notes
+
+1. The package supports manuscript plotting and writing, but it does not contain final rendered journal figures.
+2. METR-LA-mini is supplementary only and must not be merged into Pan Borneo main results.
+3. Raw provider-level FCD records are not public. Reproducing the entire pipeline from raw observations requires independent provider access.
+4. Processed prediction files are included so that key metrics can be recomputed.
+5. Statistical interpretation should distinguish paired model comparisons from independent stratum comparisons.
+6. If future manuscript versions change figure or table definitions, regenerate a new dated package rather than overwriting this one.
+
+## Validation and Audit
+
+The package was prepared after local validation/audit steps reported readiness for plotting and writing.
+
+Relevant audit outputs are stored under:
 
 ```text
-reports/data_package_validation_report.md
+conference_paper_support_package_20260706/12_AUDIT_REPORTS/
 ```
 
-## Figure-Data Mapping
-
-| Manuscript Figure | Purpose                                                           | Required CSV Files                                                                                                                                                                  | Status    |
-| ----------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| Figure 1          | Study corridor, data source, and workflow overview                | `Fig01_workflow_data.csv`                                                                                                                                                           | Available |
-| Figure 2          | Main forecasting performance against baseline models              | `Fig02_main_forecasting_performance.csv`                                                                                                                                            | Available |
-| Figure 3          | Five-seed stability and improvement consistency                   | `Fig03_five_seed_stability_mean_std.csv`; `Fig03_seed_scatter.csv`; `Fig03_improvement_boxplot.csv`                                                                                 | Available |
-| Figure 4          | Feature-group ablation analysis                                   | `Fig04_ablation_data.csv`                                                                                                                                                           | Available |
-| Figure 5          | History-length sensitivity of forecasting performance             | `Fig05_history_sensitivity_data.csv`                                                                                                                                                | Available |
-| Figure 6          | Volatility-error relationship and error heterogeneity             | `Fig06_volatility_error_data.csv`                                                                                                                                                   | Available |
-| Figure 7          | Robustness under missingness, noise, and limited training samples | `Fig07_missingness_stress_data.csv`; `Fig07_noise_stress_data.csv`; `Fig07_small_sample_training_data.csv`; `Fig07_degradation_summary_data.csv`; `phase8_small_sample_metrics.csv` | Available |
-
-## Figure 7 Definition
-
-The current manuscript definition of Figure 7 is:
-
-**Robustness under missingness, noise, and limited training samples**
-
-It contains four panels:
-
-* **Panel (a):** Missingness stress test
-* **Panel (b):** Noise stress test
-* **Panel (c):** Small-sample training sensitivity
-* **Panel (d):** Maximum observed degradation summary
-
-Older combined robustness data files, if retained, are placed under:
+The top-level readiness result was:
 
 ```text
-data/plot_data/deprecated/
+READY_FOR_PLOTTING_AND_WRITING
 ```
 
-These files are retained for traceability but are not part of the current Figure 7 definition.
+If users want to rerun validation scripts, they should inspect the scripts and configuration files under:
 
-## Included Files
+```text
+conference_paper_support_package_20260706/10_CONFIGS_ENVIRONMENT_LOGS/
+```
 
-This release includes:
+Some scripts may require the original local project layout or private raw-data access and therefore may not be fully executable from this public repository alone.
 
-* Processed analytical CSV files
-* Figure-ready CSV files
-* Data dictionary
-* File manifest with SHA256 hashes
-* YAML experiment configurations
-* Public validation scripts
-* Reproducibility reports
-* Workflow documentation
-* Variable definitions
-* Leakage-control protocol
-* Figure reproduction notes
+## Legacy Top-Level Data Folders
 
-## Excluded Files
+The repository also contains earlier public reproducibility folders:
 
-The following files are intentionally excluded:
+- `data/`;
+- `configs/`;
+- `scripts/`;
+- `reports/`;
+- `docs/`;
+- `figures/`.
 
-* Raw floating-car provider records
-* Raw API response JSON files
-* API keys, tokens, passwords, and credentials
-* Private logs and provider-access records
-* Local machine paths
-* Large intermediate window-index files
-* Model checkpoints
-* Temporary cache files
-* ZIP, RAR, and other archive files
+These remain available for traceability. For the current conference paper support package, prefer the dated folder:
 
-## Notes on Reproducibility
-
-The repository supports reproduction of the reported tables, figure data, and main experimental comparisons from the released processed files.
-
-Full end-to-end reconstruction from raw provider data is not included because the raw provider-level records are not publicly redistributed. The preprocessing and leakage-control logic are documented in the `reports/` and `docs/` folders.
+```text
+conference_paper_support_package_20260706/
+```
 
 ## Citation
 
-Please cite the associated manuscript and this repository when using the data, scripts, or documentation.
+Please cite the associated manuscript and this repository when using the data, scripts, reports, or documentation.
 
 Citation metadata are provided in:
 
@@ -223,4 +454,4 @@ CITATION.cff
 
 ## Contact
 
-For academic correspondence, please refer to the corresponding author information in the associated manuscript.
+For academic correspondence, refer to the corresponding author information in the associated manuscript.
