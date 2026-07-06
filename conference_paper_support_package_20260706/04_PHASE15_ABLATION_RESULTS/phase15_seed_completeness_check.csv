@@ -1,0 +1,16 @@
+feature_group,horizon,n_seeds,complete
+full_features,1,5,True
+full_features,3,5,True
+full_features,6,5,True
+speed_only,1,5,True
+speed_only,3,5,True
+speed_only,6,5,True
+speed_reliability,1,5,True
+speed_reliability,3,5,True
+speed_reliability,6,5,True
+speed_time,1,5,True
+speed_time,3,5,True
+speed_time,6,5,True
+speed_volatility,1,5,True
+speed_volatility,3,5,True
+speed_volatility,6,5,True

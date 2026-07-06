@@ -1,0 +1,2 @@
+file_name,original_path,copied_path,file_type,row_count,column_count,columns,notes
+TableS1_metr_la_mini_results.csv,D:\2026_PD\outputs\supplementary_metr_la_mini\TableS1_metr_la_mini_results.csv,,csv,75,21,dataset|phase|model|model_note|horizon|seed|history_hours|aggregation|sensor_count|train_n|val_n|test_n|MAE|RMSE|MAPE|sMAPE|R2|fit_time_sec|inference_time_sec|config_hash|data_hash,Phase20 supplementary metrics

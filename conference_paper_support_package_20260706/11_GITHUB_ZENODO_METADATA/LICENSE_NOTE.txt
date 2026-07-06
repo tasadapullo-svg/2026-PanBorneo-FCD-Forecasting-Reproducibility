@@ -1,0 +1,1 @@
+This ZIP is a candidate paper reproducibility support package. It should not include unauthorized third-party raw provider data. Restricted raw provider data, if detected, are excluded and recorded in the manifest.

@@ -1,0 +1,10 @@
+horizon,1,1,1,1,1,3,3,3,3,3,6,6,6,6,6
+seed,42,2024,2025,2026,3407,42,2024,2025,2026,3407,42,2024,2025,2026,3407
+model,,,,,,,,,,,,,,,
+GRU,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+HA,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+Persistence,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+ST-Transformer-lite,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+SeasonalHA,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+TCN,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
+XGBoost,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True

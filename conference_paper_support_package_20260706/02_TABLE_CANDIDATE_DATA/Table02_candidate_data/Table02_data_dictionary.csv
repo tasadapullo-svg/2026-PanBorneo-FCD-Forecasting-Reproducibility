@@ -1,0 +1,15 @@
+column_name,meaning,unit,source_file,related_panel,notes
+input_window,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+forecast_horizons,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+feature_set,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+seed_list,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+scaler_rule,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+target_variable,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+main_resolution,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+node_count,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+hardware_or_environment,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+model,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+model_type,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+key_hyperparameters,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+epochs_or_training_setting,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column
+early_stopping,See source file/context; GPT should infer/verify before plotting.,,Table02_model_settings.csv,Table02,candidate data column

@@ -1,0 +1,2 @@
+file_name,original_path,copied_path,file_type,row_count,column_count,columns,can_support_table,notes
+Table02_model_settings.csv,D:\2026_PD\outputs\final_plot_table_data\main_tables\Table02_model_settings.csv,02_TABLE_CANDIDATE_DATA\Table02_candidate_data\Table02_model_settings.csv,csv,7,14,input_window|forecast_horizons|feature_set|seed_list|scaler_rule|target_variable|main_resolution|node_count|hardware_or_environment|model|model_type|key_hyperparameters|epochs_or_training_setting|early_stopping,YES,candidate data

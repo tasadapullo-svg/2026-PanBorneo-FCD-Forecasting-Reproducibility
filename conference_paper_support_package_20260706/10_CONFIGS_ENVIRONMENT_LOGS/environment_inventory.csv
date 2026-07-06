@@ -1,0 +1,7 @@
+key,value
+python_executable,D:\2026_PD\envs\panborneo_fcd\python.exe
+python_version,"3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:28:51) [MSC v.1944 64 bit (AMD64)]"
+torch_version,2.6.0+cu124
+torch_cuda_available,True
+torch_cuda_version,12.4
+gpu_name,NVIDIA RTX A3000 Laptop GPU

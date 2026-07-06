@@ -1,0 +1,28 @@
+project:
+  name: PanBorneo_SIRAF_week_forecasting
+  random_seed: 20260623
+
+paths:
+  package_zip: data/raw/PanBorneo_TomTom_Cleaned_Experiment_Package.zip
+  extracted_root: data/raw/package_extracted
+  primary_panel: data/raw/package_extracted/04_panels/panel_1h.csv.gz
+  cleaned_records: data/raw/package_extracted/02_cleaned_records/tomtom_cleaned_records.csv.gz
+  nodes: data/raw/package_extracted/03_nodes/nodes.csv
+  existing_dictionary: data/raw/package_extracted/08_documentation/data_dictionary.csv
+  output_tables: outputs/tables
+  output_logs: outputs/logs
+  reports: reports
+
+audit:
+  primary_granularity: 1h
+  speed_min_kmh: 0
+  speed_max_kmh: 150
+  travel_time_min_seconds: 1
+  travel_time_max_seconds: 86400
+  tti_min: 0
+  tti_max: 10
+  split_ratios: [0.70, 0.15, 0.15]
+  history_windows_hours: [24, 72, 168]
+  forecast_horizons_hours: [1, 3, 6, 12, 24, 168]
+  direct_1week_min_point_coverage: 0.70
+  direct_1week_min_valid_windows_per_point: 10

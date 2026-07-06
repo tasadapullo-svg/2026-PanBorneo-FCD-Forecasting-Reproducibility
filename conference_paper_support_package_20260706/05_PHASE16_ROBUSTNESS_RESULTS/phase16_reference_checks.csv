@@ -1,0 +1,4 @@
+check,max_abs,pass
+missingness_0pct,0.0,True
+noise_clean,0.0,True
+small_sample_100pct,0.0,True

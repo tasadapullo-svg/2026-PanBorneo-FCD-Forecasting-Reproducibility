@@ -1,0 +1,26 @@
+column_name,meaning,unit,source_file,related_panel,notes
+stratification_type,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+horizon,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+best_stratum,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+worst_stratum,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+best_MAE_mean,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+worst_MAE_mean,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+error_gap_percent,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+interpretation,See source file/context; GPT should infer/verify before plotting.,,final_stratified_interpretation.csv,Fig06,candidate data column
+stratification_type,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+horizon,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+best_stratum,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+worst_stratum,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+best_MAE_mean,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+worst_MAE_mean,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+error_gap_percent,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+interpretation,See source file/context; GPT should infer/verify before plotting.,,Fig06_error_heterogeneity_summary.csv,Fig06,candidate data column
+stratification_type,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+stratum,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+horizon,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+test_n_mean,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+MAE_mean,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+MAE_std,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+RMSE_mean,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+relative_MAE_vs_best_stratum_percent_mean,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column
+seeds,See source file/context; GPT should infer/verify before plotting.,,phase17_combined_stratified_summary.csv,Fig06,candidate data column

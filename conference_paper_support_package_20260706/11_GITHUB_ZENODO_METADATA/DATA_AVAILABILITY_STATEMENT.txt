@@ -1,0 +1,1 @@
+The public release package is intended to include cleaned, derived, aggregated, and reproducibility-supporting data sufficient to reproduce the manuscript figures, tables, metrics, statistical tests, logs, and configurations. It does not include third-party provider raw data that cannot be redistributed. GitHub URL: <placeholder>. Zenodo DOI: <placeholder>.

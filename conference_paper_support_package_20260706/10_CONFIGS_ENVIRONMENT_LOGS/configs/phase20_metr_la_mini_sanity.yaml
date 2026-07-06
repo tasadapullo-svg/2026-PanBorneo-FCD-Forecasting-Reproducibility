@@ -1,0 +1,63 @@
+project:
+  name: PanBorneo_SIRAF_phase20_metr_la_mini_sanity
+
+paths:
+  input_csv: data/benchmark/METR-LA-mini/METR-LA.csv
+  output_root: outputs/supplementary_metr_la_mini
+  output_logs: logs
+  reports: reports
+
+task:
+  dataset: METR-LA-mini
+  purpose: external_sanity_check_not_sota
+  aggregation: 1h
+  raw_interval_minutes: 5
+  sensors: 50
+  history_hours: 24
+  horizons_hours: [1, 3, 6]
+  target_variable: speed
+
+models:
+  enabled: [HA, Persistence, TCN, ST-Transformer-lite, Proposed]
+  proposed_alias: TCN
+  tcn:
+    channels: [32, 32, 32]
+    kernel_size: 3
+    dropout: 0.1
+  st_transformer_lite:
+    d_model: 32
+    nhead: 4
+    num_layers: 2
+    dim_feedforward: 64
+    dropout: 0.1
+
+data:
+  split_ratios: [0.70, 0.15, 0.15]
+  treat_zero_as_missing: true
+  cache_arrays_in_memory: true
+  smoke:
+    max_train_samples: 1024
+    max_val_samples: 256
+    max_test_samples: 512
+  full:
+    max_train_samples: null
+    max_val_samples: null
+    max_test_samples: null
+
+training:
+  seeds: [42, 2024, 2025, 2026, 3407]
+  smoke:
+    epochs: 2
+    early_stopping_patience: 1
+  full:
+    epochs: 20
+    early_stopping_patience: 4
+  batch_size: 8192
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  device: cpu
+  amp: false
+  gpu_resident: false
+  cpu_memory_resident: true
+  num_threads: 0

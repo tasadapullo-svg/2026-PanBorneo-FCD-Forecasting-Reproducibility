@@ -1,0 +1,16 @@
+model,horizon,n_seeds,complete
+HA,1,5,True
+HA,3,5,True
+HA,6,5,True
+Persistence,1,5,True
+Persistence,3,5,True
+Persistence,6,5,True
+Proposed,1,5,True
+Proposed,3,5,True
+Proposed,6,5,True
+ST-Transformer-lite,1,5,True
+ST-Transformer-lite,3,5,True
+ST-Transformer-lite,6,5,True
+TCN,1,5,True
+TCN,3,5,True
+TCN,6,5,True

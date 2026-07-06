@@ -1,0 +1,71 @@
+project:
+  name: PanBorneo_SIRAF_phase13_strong_baselines
+  random_seed: 42
+
+paths:
+  window_index: outputs/tables/window_index_all.csv
+  panel_1h: data/processed/phase2_panel_1h_model_ready.csv.gz
+  output_tables: outputs/tables
+  predictions: outputs/predictions/phase13
+  output_logs: logs
+  reports: reports
+
+task:
+  target_variable: speed
+  target_column: current_speed
+  target_definition: future_window_mean_speed
+  aggregation: 1h
+  history_hours: 24
+  horizons_hours: [1, 3, 6]
+  min_input_observed_ratio: 0.80
+  min_target_observed_ratio: 0.80
+  expected_node_count: 51
+
+data:
+  input_features: [current_speed, missing_mask, coverage_ratio_24h, volatility_tti_6h, hour_of_day, day_of_week, weekend_flag]
+  window_chunksize: 200000
+  num_workers: 0
+
+models:
+  enabled: [HA, SeasonalHA, Persistence, XGBoost, GRU, TCN, ST-Transformer-lite]
+  xgboost:
+    n_estimators: 500
+    max_depth: 8
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    n_jobs: -1
+  gru:
+    hidden_size: 64
+    num_layers: 1
+    dropout: 0.0
+  tcn:
+    channels: [32, 32, 32]
+    kernel_size: 3
+    dropout: 0.1
+  st_transformer_lite:
+    d_model: 32
+    nhead: 4
+    num_layers: 2
+    dim_feedforward: 64
+    dropout: 0.1
+
+training:
+  seeds: [42, 2024, 2025, 2026, 3407]
+  full:
+    max_train_samples: null
+    max_val_samples: null
+    max_test_samples: null
+    epochs: 30
+    early_stopping_patience: 5
+  smoke:
+    max_train_samples: 256
+    max_val_samples: 64
+    max_test_samples: 128
+    epochs: 2
+    early_stopping_patience: 1
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  device: auto

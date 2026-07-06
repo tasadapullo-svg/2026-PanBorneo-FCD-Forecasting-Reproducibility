@@ -1,0 +1,16 @@
+paths:
+  phase13_locked: outputs/locked/phase13_full
+  phase13_working_tables: outputs/tables/phase13_strong_baseline_metrics.csv
+  phase13_working_predictions: outputs/predictions/phase13
+  phase15_metrics: outputs/tables/phase15_feature_ablation_metrics.csv
+  phase16_missingness: outputs/tables/phase16_missingness_stress.csv
+  phase16_noise: outputs/tables/phase16_noise_stress.csv
+  phase16_small_sample: outputs/tables/phase16_small_sample_training.csv
+  phase17_tables: outputs/tables
+  output_tables: outputs/tables
+  reports: reports
+multiple_comparison: holm
+alpha: 0.05
+main_model: TCN
+seeds: [42, 2024, 2025, 2026, 3407]
+horizons: [1, 3, 6]

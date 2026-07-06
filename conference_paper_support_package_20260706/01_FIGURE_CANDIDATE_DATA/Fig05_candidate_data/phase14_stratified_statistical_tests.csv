@@ -1,0 +1,13 @@
+﻿phase_source,stratification_type,horizon,strata_compared,n_groups,total_n,test_name,statistic,p_value,p_value_corrected,effect_size,effect_size_type,significance_label
+phase17,reliability,1,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,reliability,3,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,reliability,6,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,coverage,1,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,coverage,3,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,coverage,6,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,volatility,1,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,volatility,3,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,volatility,6,high | low | medium,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,traffic_state,1,degraded | free-flow | moderate,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,traffic_state,3,degraded | free-flow | moderate,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*
+phase17,traffic_state,6,degraded | free-flow | moderate,3,15,Kruskal-Wallis H,12.5,0.0019304541362277095,0.023165449634732514,0.875,epsilon-squared,*

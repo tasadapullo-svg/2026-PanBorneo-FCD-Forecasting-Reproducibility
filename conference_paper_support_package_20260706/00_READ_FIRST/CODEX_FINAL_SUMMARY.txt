@@ -1,0 +1,24 @@
+Final ZIP path: D:\2026_PD\outputs\paper_data_package_for_gpt_review.zip
+Total files copied: 532
+Total CSV files: 135
+Total parquet files: 255
+Total markdown/report/log files: 124
+Phase 13 metric rows: 105
+Phase 13 prediction parquet files: 105
+Phase 15 metric rows: 75
+Phase 15 prediction parquet files: 75
+Phase 16 missingness rows: 60
+Phase 16 noise rows: 60
+Phase 16 small-sample rows: 75
+Phase 20 metric rows: 75
+Phase 20 prediction parquet files: 75
+Table3 corrected p-value found: YES
+Table3 effect size found: YES
+METR-LA-mini excluded from main figures/tables: YES
+Figure candidate data status: PASS
+Table candidate data status: PASS
+GitHub/Zenodo metadata status: PASS
+Ready for GPT review: YES
+Main warnings:
+- Restricted/provider-derived raw data are excluded and recorded in audit_restricted_raw_data_exclusions.csv.
+- METR-LA-mini is supplementary only; Proposed equals TCN alias in Phase20 sanity check, so do not overclaim.

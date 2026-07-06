@@ -1,0 +1,16 @@
+feature_group,horizon,seed,relative_MAE_change_from_speed_only_percent,is_zero
+speed_only,1,42,0.0,True
+speed_only,1,2024,0.0,True
+speed_only,1,2025,0.0,True
+speed_only,1,2026,0.0,True
+speed_only,1,3407,0.0,True
+speed_only,3,42,0.0,True
+speed_only,3,2024,0.0,True
+speed_only,3,2025,0.0,True
+speed_only,3,2026,0.0,True
+speed_only,3,3407,0.0,True
+speed_only,6,42,0.0,True
+speed_only,6,2024,0.0,True
+speed_only,6,2025,0.0,True
+speed_only,6,2026,0.0,True
+speed_only,6,3407,0.0,True

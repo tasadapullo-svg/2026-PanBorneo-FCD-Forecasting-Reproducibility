@@ -1,0 +1,48 @@
+project:
+  name: PanBorneo_SIRAF_week_forecasting
+  random_seed: 20260623
+
+paths:
+  window_index: outputs/tables/window_index_all.csv
+  panel_1h: data/processed/phase2_panel_1h_model_ready.csv.gz
+  split_summary: outputs/tables/train_val_test_split_summary.csv
+  feasibility: outputs/tables/window_feasibility_by_horizon.csv
+  target_summary: outputs/tables/target_variable_summary.csv
+  output_tables: outputs/tables
+  output_logs: outputs/logs
+  reports: reports
+
+task:
+  target_variable: speed
+  target_column: current_speed
+  histories_hours: [24, 72, 168]
+  horizons_hours: [1, 3, 6, 12, 24]
+  excluded_horizons_hours: [168]
+  target_aggregation: mean
+  min_target_observed_ratio: 0.80
+  min_input_observed_ratio: 0.80
+
+baselines:
+  persistence:
+    enabled: true
+  historical_average:
+    enabled: true
+  seasonal_historical_average:
+    enabled: true
+    group_columns: [point_id, hour_of_day, day_of_week]
+  ridge_regression:
+    enabled: true
+    alpha: 1.0
+  random_forest:
+    enabled: false
+    n_estimators: 200
+    max_depth: 12
+    min_samples_leaf: 5
+    n_jobs: -1
+    max_train_rows: 200000
+
+runtime:
+  window_chunksize: 200000
+  save_feature_matrix: false
+  feature_matrix_path: data/processed/phase3_speed_baseline_features.csv.gz
+  max_rows_per_split: null

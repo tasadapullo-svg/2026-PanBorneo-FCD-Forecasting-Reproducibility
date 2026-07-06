@@ -1,0 +1,46 @@
+project:
+  name: PanBorneo_SIRAF_week_forecasting
+  random_seed: 20260623
+
+paths:
+  benchmark_root: data/benchmark
+  dataset_candidates:
+    - data/benchmark/METR-LA-mini
+    - data/benchmark/PEMS-BAY-mini
+    - data/benchmark/metr-la-mini
+    - data/benchmark/pems-bay-mini
+  output_tables: outputs/tables
+  output_logs: outputs/logs
+  checkpoints: outputs/checkpoints
+  reports: reports
+
+data:
+  history_steps: 12
+  horizon_steps: 12
+  split_ratios: [0.70, 0.15, 0.15]
+  max_train_samples: 50000
+  max_val_samples: 10000
+  max_test_samples: 10000
+
+task:
+  purpose: supplementary_public_benchmark_sanity_check
+  input_feature_group: speed_only
+
+training:
+  model: TCN
+  baselines: [Persistence, HistoricalAverage]
+  seeds: [42, 2025, 20260623, 1234, 3407]
+  epochs: 5
+  early_stopping_patience: 2
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  seed: 20260623
+  device: auto
+
+models:
+  tcn:
+    channels: [32, 32]
+    kernel_size: 3
+    dropout: 0.1

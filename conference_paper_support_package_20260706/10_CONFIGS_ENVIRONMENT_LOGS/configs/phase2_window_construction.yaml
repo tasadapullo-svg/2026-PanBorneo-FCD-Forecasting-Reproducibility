@@ -1,0 +1,28 @@
+project:
+  name: PanBorneo_SIRAF_week_forecasting
+  random_seed: 20260623
+
+paths:
+  primary_panel: data/raw/package_extracted/04_panels/panel_1h.csv.gz
+  point_quality: outputs/tables/point_quality_summary.csv
+  output_tables: outputs/tables
+  output_logs: outputs/logs
+  processed: data/processed
+  reports: reports
+
+windowing:
+  frequency: 1h
+  split_ratios: [0.70, 0.15, 0.15]
+  histories_hours: [24, 72, 168]
+  main_horizons_hours: [1, 3, 6, 12, 24]
+  extended_horizons_hours: [168]
+  require_input_and_target_within_same_split: true
+  minimum_target_observed_ratio_for_feasible: 0.80
+  minimum_input_observed_ratio_for_feasible: 0.80
+
+targets:
+  preferred:
+    speed: current_speed
+    travel_time: current_travel_time
+    congestion_index: tti
+    travel_time_delay: travel_time_delay

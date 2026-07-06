@@ -1,0 +1,5 @@
+phase,metric_rows,parquet_files,recompute_ok,reference_ok,missing_rows,noise_rows,small_rows
+phase13,105.0,105.0,True,,,,
+phase15,75.0,75.0,,True,,,
+phase16,,,,True,60.0,60.0,75.0
+phase20,75.0,75.0,,,,,

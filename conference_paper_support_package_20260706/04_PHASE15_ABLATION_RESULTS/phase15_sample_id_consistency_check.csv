@@ -1,0 +1,16 @@
+scope,files,sample_id_consistent,sample_count
+"('phase15', 1, 2024)",5,True,12265
+"('phase15', 1, 2025)",5,True,12265
+"('phase15', 1, 2026)",5,True,12265
+"('phase15', 1, 3407)",5,True,12265
+"('phase15', 1, 42)",5,True,12265
+"('phase15', 3, 2024)",5,True,11878
+"('phase15', 3, 2025)",5,True,11878
+"('phase15', 3, 2026)",5,True,11878
+"('phase15', 3, 3407)",5,True,11878
+"('phase15', 3, 42)",5,True,11878
+"('phase15', 6, 2024)",5,True,12166
+"('phase15', 6, 2025)",5,True,12166
+"('phase15', 6, 2026)",5,True,12166
+"('phase15', 6, 3407)",5,True,12166
+"('phase15', 6, 42)",5,True,12166

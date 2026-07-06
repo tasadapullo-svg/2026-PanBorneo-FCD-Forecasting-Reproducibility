@@ -1,0 +1,57 @@
+project:
+  name: PanBorneo_SIRAF_phase16_robustness
+paths:
+  window_index: outputs/tables/window_index_all.csv
+  panel_1h: data/processed/phase2_panel_1h_model_ready.csv.gz
+  output_tables: outputs/tables
+  predictions: outputs/predictions/phase16
+  output_logs: logs
+  reports: reports
+task:
+  target_variable: speed
+  target_column: current_speed
+  history_hours: 24
+  horizons_hours: [1, 3, 6]
+  min_input_observed_ratio: 0.80
+  min_target_observed_ratio: 0.80
+  expected_node_count: 51
+data:
+  input_features: [current_speed, missing_mask, coverage_ratio_24h, volatility_tti_6h, hour_of_day, day_of_week, weekend_flag]
+  window_chunksize: 200000
+main_model: TCN
+models:
+  tcn:
+    channels: [32, 32, 32]
+    kernel_size: 3
+    dropout: 0.1
+experiments:
+  missingness_levels_percent: [0, 10, 20, 30]
+  noise_levels:
+    clean: 0.00
+    low: 0.05
+    medium: 0.10
+    high: 0.15
+  small_sample_ratios_percent: [20, 40, 60, 80, 100]
+training:
+  seeds: [42, 2024, 2025, 2026, 3407]
+  full:
+    max_train_samples: null
+    max_val_samples: null
+    max_test_samples: null
+    epochs: 30
+    early_stopping_patience: 5
+  smoke:
+    max_train_samples: 256
+    max_val_samples: 64
+    max_test_samples: 128
+    epochs: 2
+    early_stopping_patience: 1
+  batch_size: 4096
+  num_workers: 0
+  pin_memory: true
+  amp: true
+  gpu_resident: true
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 1.0
+  device: auto
